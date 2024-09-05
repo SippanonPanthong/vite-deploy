@@ -1,50 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap');
+
+#activity {
+    padding-top: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดให้อยู่กึ่งกลางหน้าจอ */
+}
 
 /* New style for the header container with colored background */
 .activity-header-container {
     background-color: #0d2b3f;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 30px;
-    margin-left: auto; /* ใช้ margin-left: auto เพื่อผลักกรอบไปทางขวา */
-    margin-right: 0; /* ให้กรอบชิดขอบขวา */
-    margin-top: 20px; /* Add space above */
-    max-width: 85%; 
-    text-align: right; /* Align text to the left */
+    width: 70%; /* กำหนดความกว้างเองที่ต้องการ เช่น 80% */
+    max-width: 100%; /* ยังคงจำกัดความกว้างสูงสุดอยู่ที่ 100% */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    margin-bottom: 20px; /* เพิ่มพื้นที่ด้านล่าง */
+    margin-left: auto; /* จัดให้อยู่กึ่งกลาง */
+    margin-right: auto; /* จัดให้อยู่กึ่งกลาง */
 }
 
 /* Styling for the activity title */
 .activity-title {
-    margin-top: 0;
-    margin-bottom: 5px; /* ลด margin ล่างเพื่อให้กรอบชิดตัวหนังสือมากขึ้น */
-    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-family: 'Sarabun', sans-serif;
     font-size: 3rem;
     background: linear-gradient(315deg, #b5e3f3 15%, #FFFFFF 100%);
     -webkit-background-clip: text;
-    color: transparent; /* ใช้ gradient text color */
+    color: transparent;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
 }
 
 /* Styling for the portfolio header */
 .activity-header {
-    margin-top: 0;
-    margin-bottom: 0; /* ลด margin ล่างเพื่อให้กรอบชิดตัวหนังสือมากขึ้น */
-    font-family: 'Poppins', serif;
+    margin: 0 auto 20px auto; /* กึ่งกลางทั้งด้านซ้ายและขวา */
+    font-family: 'Sarabun', serif;
     font-size: 1.6rem;
-    background: linear-gradient(315deg, #55c1e6 15%, #e4fdff 74%);
+    background: linear-gradient(315deg, #5cccf1 15%, #e4fdff 74%);
     -webkit-background-clip: text;
-    color: transparent; /* ใช้ gradient text color */
+    color: transparent;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
 }
 
 /* General styles for project titles and texts */
 .proj-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sarabun', sans-serif;
     font-size: 2.2rem;
     background: linear-gradient(315deg, #44b09e 0%, #92c2e2 74%);
     -webkit-background-clip: text;
     color: transparent;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    margin-bottom: 1rem; /* เพิ่มพื้นที่ด้านล่าง */
 }
 
 .proj-text {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sarabun', sans-serif;
     max-width: 70%;
     margin: 0 auto;
     color: white;
@@ -52,7 +64,7 @@
 
 .used-stack {
     margin-top: 5%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Sarabun', sans-serif;
     font-size: 1.3rem;
     background: linear-gradient(315deg, #8544b0 0%, #98cff3 74%);
     -webkit-background-clip: text;

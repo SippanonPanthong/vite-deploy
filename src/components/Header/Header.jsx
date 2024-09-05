@@ -32,7 +32,7 @@ function Header() {
                         Home
                     </HashLink>
                     <HashLink className="nav-bar-links" to="/#description" onClick={handleLinkClick}>
-                        Personal_Information
+                        About me
                     </HashLink>
                     <HashLink className="nav-bar-links" to="/#portfolio" onClick={handleLinkClick}>
                         Education
@@ -57,7 +57,15 @@ function Header() {
                     to='/certifications'
                     onClick={handleLinkClick}
                     >
-                        Certifications
+                        Certificate
+                    </HashLink>
+                    <HashLink 
+                    className="nav-bar-links"
+                    as={LinkRouter}
+                    to='/transcript'
+                    onClick={handleLinkClick}
+                    >
+                        Transcript
                     </HashLink>
                 </Nav>
             </Navbar.Collapse>

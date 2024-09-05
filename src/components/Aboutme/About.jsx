@@ -10,21 +10,18 @@ function About() {
     const [showTextBox, setShowTextBox] = useState(false);
     const [randomText, setRandomText] = useState('');
     const [currentImage, setCurrentImage] = useState(avatar3);
-    const [currentImage2, setCurrentImage2] = useState(avatar1); // New state for second image
+    const [currentImage2, setCurrentImage2] = useState(avatar1);
 
-    // Array of different texts
     const textOptions = [
-        'okay that hurt a little but its okay',
-        'ow, um hi?',
-        'yea i get it you like to hit me lets move on now',
-        'please dont get stuck here',
-        'omg there is more to this portfolio then punching the dev in the face',
-        'this is getting to be annoying',
-        'help!!!!'
+        'ยินดีที่ได้รู้จัก',
+        'ฉันชื่อเล่น บาส',
+        'อยากรู้ฉันให้มากขึ้นใช่ไหมหล่ะ',
+        'อยากรู้อะไร เลือกด้านบนได้เลย',
+        'ดีใจนะ ที่เข้ามาเยี่ยมชม',
+        'ขอบคุณครับ'
     ];
 
     useEffect(() => {
-        // Handle random text generation when the text box is rendered
         if (showTextBox) {
             const randomIndex = Math.floor(Math.random() * textOptions.length);
             setRandomText(textOptions[randomIndex]);
@@ -32,26 +29,22 @@ function About() {
     }, [showTextBox]);
 
     const handleImageClick = () => {
-        // Toggle the image when clicked
-        
+        setShowTextBox(!showTextBox);
     };
 
     const handleImage2Click = () => {
-        // Toggle the second image when clicked
-        
+        setShowTextBox(!showTextBox);
     };
 
     useEffect(() => {
-        // Display "Hi Nice To Meet You" on the first click
         if (showTextBox && randomText === '' && textOptions.length > 0) {
-            setRandomText('Hi Nice To Meet You');
+            setRandomText('สวัสดีครับ');
         }
     }, [showTextBox, randomText, textOptions]);
 
     return (
         <div className="about-container" id="about-me">
             <div className="dot-container">
-                {/* sets random colors for each cycle */}
                 {Array.from({ length: 150 }, (_, index) => {
                     const dotStyle = {
                         backgroundColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`,
@@ -63,28 +56,30 @@ function About() {
                 })}
             </div>
 
-            {/* actual about me component */}
-            <div className="container text-center mt-5">
+            <div className="container text-center">
                 <h1 className='first-name'>Mr. Narongdach Sujintanathum</h1>
-                <p className='personal-title'>"ตอนนี้ผมกำลังเรียนอยู่ในระดับมัธยมปลาย และกำลังมองหา มหาวิทยาลัย ที่เปิดสอนเกี่ยวกับ คณะ เทคโนโลยีสารสนเทศ"</p>
+                <p className='personal-title'>"ผมเป็นนักเรียนมัธยมปลายที่มีความสนใจในด้านเทคโนโลยีสารสนเทศ และ การเขียนโปรแกรมเป็นสิ่งที่ผมชื่นชอบมาก"</p>
                 <p className='about-me'>
-                ผมชอบเขียนโปรแกรมเพราะมันช่วยให้ผมแก้ปัญหาได้อย่างสร้างสรรค์ การเรียนรู้การเขียนโค้ดทำให้ผมเห็นถึงความเป็นไปได้ที่ไม่มีที่สิ้นสุด ผมอยากพัฒนาทักษะนี้ต่อ และเชื่อว่าการเรียนในคณะ เทคโนโลยีสารสนเทศ จะช่วยให้ผมบรรลุเป้าหมายของผมได้📍
-                </p>
+                เพราะมันไม่เพียงแต่ช่วยให้ผมแก้ปัญหาได้อย่างสร้างสรรค์ แต่ยังเปิดโอกาสให้ผมได้ค้นพบและเรียนรู้สิ่งใหม่ๆ อยู่เสมอ ผมมีความกระตือรือร้นในการพัฒนาทักษะด้านนี้ และเชื่อว่าการศึกษาในคณะเทคโนโลยีสารสนเทศจะช่วยเสริมสร้างความรู้และความสามารถที่จำเป็นในการก้าวหน้าในอนาคต ผมมั่นใจว่าการเรียนในคณะนี้จะทำให้ผมสามารถนำความรู้ที่ได้รับไปใช้ในการพัฒนาเทคโนโลยีที่มีประโยชน์ต่อสังคมได้
+                <br/>
+                <br/>
+                ผมหวังเป็นอย่างยิ่งว่าจะได้เข้าร่วมเป็นส่วนหนึ่งของมหาวิทยาลัยนี้ เพื่อเรียนรู้และเติบโตไปพร้อมกับเพื่อนร่วมรุ่นและคณาจารย์ที่มีความรู้และประสบการณ์ ผมเชื่อว่ามหาวิทยาลัยของท่านจะเป็นสถานที่ที่เหมาะสมที่สุดสำหรับผมในการพัฒนาทักษะและเติบโตในสายงานที่ผมรัก
+                </p> 
 
-                <div className="mt-3 social-links-container">
-                    <a className="social-links" href="https://www.linkedin.com/in/peyton-touma-b666a7281/">
+                <div className="social-links-container">
+                    <a className="social-links" href="">
                         <FontAwesomeIcon icon={faLinkedin} className="fa-1x socail-icons" />
                     </a>
-                    <a className="social-links" href="https://github.com/pToum21">
+                    <a className="social-links" href="">
                         <FontAwesomeIcon icon={faGithub} className="fa-1x socail-icons" />
                     </a>
-                    <a className="social-links" href="https://discordapp.com/users/775148641014775808">
+                    <a className="social-links" href="">
                         <FontAwesomeIcon icon={faDiscord} className="fa-1x socail-icons" />
                     </a>
-                    <a className="social-links" href="https://discordapp.com/users/775148641014775808">
+                    <a className="social-links" href="https://www.facebook.com/narongdach.bass">
                         <FontAwesomeIcon icon={faFacebook} className="fa-1x socail-icons" />
                     </a>
-                    <a className="social-links" href="https://discordapp.com/users/775148641014775808">
+                    <a className="social-links" href="">
                         <FontAwesomeIcon icon={faTwitter} className="fa-1x socail-icons" />
                     </a>
                 </div>
@@ -93,10 +88,10 @@ function About() {
                 <img
                     src={currentImage}
                     alt="avatar image"
-                    className="rounded-circle img-fluid mt-5 swipe-image"
+                    className="rounded-circle img-fluid swipe-image"
                     style={{
-                        width: '220px',
-                        height: '220px',
+                        width: '180px',
+                        height: '180px',
                         cursor: 'pointer',
                         objectFit: 'cover',
                         border: '4px solid transparent',
@@ -110,15 +105,15 @@ function About() {
                 <img
                     src={currentImage2}
                     alt="second avatar image"
-                    className="rounded-circle img-fluid mt-5 swipe-image"
+                    className="rounded-circle img-fluid swipe-image"
                     style={{
-                        width: '220px',
-                        height: '220px',
+                        width: '180px',
+                        height: '180px',
                         cursor: 'pointer',
                         objectFit: 'cover',
                         border: '4px solid transparent',
                         position: 'relative',
-                        marginLeft: '20px', // Adds space between the two images
+                        marginLeft: '50px', // Adjust this value to reduce space between images
                         animation: 'innerBorderAnimation 1s infinite alternate, outerRingAnimation 5s infinite linear',
                     }}
                     onClick={handleImage2Click}
